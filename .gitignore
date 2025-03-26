@@ -21,3 +21,5 @@ data/*.csv
 # Ignore system files (macOS & Windows)
 .DS_Store
 Thumbs.db
+
+.env
