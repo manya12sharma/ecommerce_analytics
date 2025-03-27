@@ -25,6 +25,9 @@ query = " SELECT * FROM orders"
 df = pd.read_sql( query , conn)
 conn.close()
 
+# clean data 
+df.dropna(inplace=True)
+
  # save data to csv file
 df.to_csv("data/cleaned_data.csv", index=False)
 print("Data saved to cleaned_data.csv")
