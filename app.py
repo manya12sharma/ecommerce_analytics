@@ -3,7 +3,7 @@ import pandas as pd
 import mysql.connector
 import os
 from dotenv import load_dotenv
-
+ 
 load_dotenv()
 DB_HOST = os.getenv("DB_HOST")
 DB_USER = os.getenv("DB_USER")
@@ -19,3 +19,6 @@ def fetch_data():
 st.title("E-commerce Analytics Dashboard")
 data = fetch_data()
 st.write(data)
+
+
+
