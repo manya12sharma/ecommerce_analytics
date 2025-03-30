@@ -1,89 +1,65 @@
-# E-Commerce Analytics Project
+# 📊 E-Commerce Analytics Project
 
 ## 📌 Overview
-This project analyzes **E-Commerce sales data** to provide insights using **Python, Pandas,matplotlib, MySQL, and Streamlit**. The system cleans raw sales data, stores it in MySQL, and visualizes trends in a **Streamlit dashboard**.
+This project analyzes e-commerce sales data, providing insights into sales trends, customer spending, and top-selling products. The dashboard is built using **Streamlit** and fetches data dynamically from a **MySQL database**.
 
----
+## 🚀 Features
+- **Sales Over Time:** Visualizes daily sales trends.
+- **Top Spending Customers:** Identifies high-value customers.
+- **Average Order Value (AOV):** Displays key revenue metrics.
+- **Top-Selling Products:** Highlights the most popular products.
+- **Interactive Charts:** Uses **Matplotlib** and **Seaborn** for data visualization.
+- **Secure Credentials:** Uses `.env` for database authentication.
+
+## 🛠️ Tech Stack
+- **Python** (Pandas, Streamlit, Matplotlib, Seaborn, MySQL Connector)
+- **MySQL** (Data storage and querying)
+- **Streamlit** (Web-based dashboard for analysis)
+
 ## 📂 Project Structure
 ```
 ecommerce-analytics/
-├── .env               # Stores sensitive credentials (NEVER commit this to GitHub)
+├── .env               # Stores database credentials
 ├── .gitignore         # Ignores unnecessary files
 ├── data/              # Stores raw & cleaned data
 │   ├── cleaned_data.csv
-├── scripts/           # Python scripts for processing data
-│   ├── data_cleaning.py
-│   ├── prediction.py  
-├── app.py # Streamlit app 
+├── scripts/           # Python scripts for data processing
+│   ├── prediction.py  # Contains predictive analysis logic
+├── app.py             # Main Streamlit application
 ├── README.md          # Project documentation
 ```
 
----
-## 🛠️ Setup & Installation
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/manya12sharma/ecommerce-analytics.git
-cd ecommerce-analytics
-```
+## 🔧 Setup & Installation
+1. Clone the repository:
+   
+   git clone https://github.com/manya12sharma/ecommerce_analytics.git
+   cd ecommerce-analytics
+   
+2. Install dependencies:
+   
+   pip install -r requirements.txt
+   
+3. Set up your `.env` file with MySQL credentials:
+   
+   DB_HOST=your_host
+   DB_USER=your_user
+   DB_PASSWORD=your_password
+   DB_NAME=ecommerce
+   
+4. Run the application:
+   
+   streamlit run app.py
+   
 
-### 2️⃣ Set Up a Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
-```
+## 📊 Visualizations & Insights
+- **Line Chart:** Sales trend over time.
+- **Bar Chart:** Best-selling products.
+- **Histogram:** Customer order frequency.
+- **Data Tables:** Customer spending insights.
 
-### 3️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4️⃣ Set Up MySQL Database
-```sql
-CREATE DATABASE ecommerce;
-USE ecommerce;
-
-CREATE TABLE customers (
-    customer_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    email VARCHAR(255) UNIQUE,
-    signup_date DATE
-);
-
-CREATE TABLE orders (
-    order_id INT PRIMARY KEY AUTO_INCREMENT,
-    customer_id INT,
-    order_date DATE,
-    total_amount DECIMAL(10,2),
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
-```
+## 📢 Contribution
+Feel free to contribute by submitting pull requests or reporting issues!
 
 ---
-## 🚀 Running the Project
-### 1️⃣ Run Data Cleaning Script
-```bash
-python scripts/data_cleaning.py
-```
+🚀 **Developed with Python & Streamlit**
 
-### 2️⃣ Run Prediction Script
-```bash
-python scripts/prediction.py
-```
-
-### 3️⃣ Run Streamlit Dashboard
-```bash
-streamlit app.py
-```
-
----
-## 📊 Features
-✅ **Data Cleaning & Processing** - Cleans raw CSV files and stores structured data in MySQL.
-✅ **Sales Insights Dashboard** - Interactive visualizations with Streamlit.
-✅ **Prediction Model** - Uses machine learning to predict future sales trends.
-✅ **Secure Credentials** - Uses `.env` for storing database credentials safely.
-✅ **Scalability** - Supports large datasets for analytics.
-
----
-## 📢 Contributing
-Want to improve this project? **Fork, clone, and submit a pull request!** 🚀
