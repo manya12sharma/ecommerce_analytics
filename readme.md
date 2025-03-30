@@ -33,16 +33,17 @@ ecommerce-analytics/
 1. Clone the repository:
    
    git clone https://github.com/manya12sharma/ecommerce_analytics.git
-   cd ecommerce-analytics
    
-2. Set up your `.env` file with MySQL credentials:
+   cd ecommerce_analytics
+   
+3. Set up your `.env` file with MySQL credentials:
    
    DB_HOST=your_host
    DB_USER=your_user
    DB_PASSWORD=your_password
    DB_NAME=ecommerce
    
-3. Run the application:
+4. Run the application:
    
    streamlit run app.py
    
