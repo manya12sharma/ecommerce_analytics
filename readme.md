@@ -35,18 +35,14 @@ ecommerce-analytics/
    git clone https://github.com/manya12sharma/ecommerce_analytics.git
    cd ecommerce-analytics
    
-2. Install dependencies:
-   
-   pip install -r requirements.txt
-   
-3. Set up your `.env` file with MySQL credentials:
+2. Set up your `.env` file with MySQL credentials:
    
    DB_HOST=your_host
    DB_USER=your_user
    DB_PASSWORD=your_password
    DB_NAME=ecommerce
    
-4. Run the application:
+3. Run the application:
    
    streamlit run app.py
    
