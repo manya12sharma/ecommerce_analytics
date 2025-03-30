@@ -35,7 +35,7 @@ print(df_customers.head())
 print(df_products.head())
 print(df_order_items.head())
 
-# Save DataFrames to CSV (if needed)
+# Save DataFrames to CSV 
 df_orders.to_csv("data/orders.csv", index=False)
 df_customers.to_csv("data/customers.csv", index=False)
 df_products.to_csv("data/products.csv", index=False)
